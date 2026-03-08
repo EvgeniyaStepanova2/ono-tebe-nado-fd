@@ -174,9 +174,6 @@ ul {
 
 .lots__card-list {
   list-style-type: none;
-}
-
-.lots__card-list {
   display: flex;
   gap: 25px;
 }
@@ -305,7 +302,7 @@ ul {
   margin-top: 180px;
 }
 
-.footer__address {  
+.footer__address {
   justify-self: end;
   max-width: 315px;
   align-items: start;
