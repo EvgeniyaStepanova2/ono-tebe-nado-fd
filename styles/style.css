@@ -1,14 +1,4 @@
-
-ul {
-  list-style-type: none;
-}
-
-.with-bullet {
-  list-style-type: circle;
-}
-
 .header {
-  height: 293px;
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   padding: 92px 50px;
@@ -35,7 +25,10 @@ ul {
 .header__menu-item-active a {
   border-bottom: none;
   list-style-type: none;
-  
+}
+
+.with-bullet {
+  list-style-type: circle;
 }
 
 .header__logo {
@@ -64,20 +57,22 @@ ul {
 .address a {
   text-decoration: none;
   border-bottom: 1px solid #000;
+  padding-bottom: 5px;
 }
 
 .cover {
   padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
+  background-position: center;
+  background-size: cover;
   min-height: 757px;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0; 
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -89,7 +84,6 @@ ul {
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
-  height: 385px;
   position: relative;
   z-index: 2;
 }
@@ -163,6 +157,7 @@ ul {
 .lots__card-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -175,38 +170,30 @@ ul {
 .card-link {
   height: 100%;
   text-decoration: none;
+  display: block;
 }
 
 .card {
   display: flex;
   flex-direction:column;
   justify-content: space-between;
-  height: 100%;
   padding: 48px 40px;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 334px;
-  height: 596px;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 334px;
-  height: 596px;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 334px;
-  height: 596px;
 }
 
 .card__title {
@@ -244,7 +231,6 @@ ul {
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
-  height: 595px;
   margin: 120px 24px 0px 24px;
 }
 
@@ -286,7 +272,6 @@ ul {
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 180px;
   margin-top: 180px;
 }
 
@@ -302,6 +287,7 @@ ul {
   flex-direction: column;
   align-items: center;
   line-height: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -321,11 +307,7 @@ ul {
 
 .footer__social-list {
   display: flex;
-  gap: 48px;
-}
-
-.footer-icons {
-  display: flex;
   justify-content: center;
   padding-left: 27px;
+  gap: 48px;
 }
