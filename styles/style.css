@@ -273,6 +273,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 180px;
+  padding-bottom: 82px;
 }
 
 .footer__address {
